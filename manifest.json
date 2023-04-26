@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "PS Currency Converter",
+    "description": "Convert the playstation store currency",
+    "version":"1.0",
+    "icons":{
+        "16": "images/IconKitchen-Output/web/icon-192.png",
+        "48": "images/IconKitchen-Output/web/icon-192.png",
+        "128": "images/IconKitchen-Output/web/icon-192.png"
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "images/IconKitchen-Output/web/icon-192.png",
+            "48": "images/IconKitchen-Output/web/icon-192.png",
+            "128": "images/IconKitchen-Output/web/icon-192.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "content_scripts":[{
+        "matches": ["https://store.playstation.com/*"],
+        "js":["script.js"]
+    }]
+}
