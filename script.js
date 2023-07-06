@@ -1,10 +1,24 @@
 async function convertToUSD() {
-    const original = document.querySelector('span.psw-t-title-m');
+    const original = document.querySelectorAll('span.psw-t-title-m');
     const elements = document.querySelectorAll('span.psw-t-title-m');
+
+    if(original.length > 0){
+      original.forEach((originals) => {
+        const tempElement = document.createElement('div');
+        tempElement.innerHTML = originals.innerHTML;
+
+        const text = tempElement.textContent;
+        //console.log(text);  
+
+      });
+    }
   
     if (elements.length > 0) {
       // Iterate over each element
       elements.forEach((element) => {
+        const text = element.textContent;
+        const number = parseFloat(text.match(/\d+/)[0]);
+        console.log(number);
         // Modify the data inside each element
         element.textContent = 'US$99.99';
         console.log(element);
