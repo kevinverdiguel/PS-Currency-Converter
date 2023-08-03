@@ -32,20 +32,19 @@ async function convertPrice() {
           
         });
 
-        /*if (elements.length > 0) {
+        if (elements.length > 0) {
           // Iterate over each element
           elements.forEach((element) => {
             const text = element.textContent;
             //const number = parseFloat(text.match(/\d+/)[0]);
-            //console.log(number);
-            // Modify the data inside each element
-            element.textContent = 'US$99.99';
-            console.log(element);
+
             // Replace the original element with the modified element's outerHTML
-            elements.forEach((updatedElement) => {
-              element.outerHTML = updatedElement.outerHTML;
-            });
-          });*/
+            const newElement = document.createElement('span');
+            newElement.className = 'psw-t-title-m';
+            newElement.textContent = 'US$99.99';
+
+            element.parentNode.replaceChild(newElement, element);
+          });
 
         if(text.length > 0){
           text.forEach((precios) => {
@@ -66,6 +65,7 @@ async function convertPrice() {
         });
     }
   }
+}
 }
 }
 convertPrice();
