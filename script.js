@@ -20,7 +20,7 @@ async function convertPrice() {
       parseFloat(cambioAMXN);
       console.log(cambioAMXN);
 
-      /*if(original.length > 0){
+      if(original.length > 0){
         original.forEach((originals) => {
           const tempElement = document.createElement('div');
           tempElement.innerHTML = originals.innerHTML;
@@ -30,9 +30,9 @@ async function convertPrice() {
           //console.log(text)
           
           
-        });*/
+        });
 
-        if (elements.length > 0) {
+        /*if (elements.length > 0) {
           // Iterate over each element
           elements.forEach((element) => {
             const text = element.textContent;
@@ -45,7 +45,7 @@ async function convertPrice() {
             elements.forEach((updatedElement) => {
               element.outerHTML = updatedElement.outerHTML;
             });
-          });
+          });*/
 
         if(text.length > 0){
           text.forEach((precios) => {
